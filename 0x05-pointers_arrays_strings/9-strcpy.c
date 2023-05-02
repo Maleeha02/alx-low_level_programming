@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strcpy - Copies the string pointed to by src
+ * char *_strcpy - Copies the string pointed to by src
  * @dest: Copy to
  * @src: Copy from
  * Return: String
@@ -14,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		l++;
 	}
-	for (; x < 1; x++)
+	for ( ; x < 1 ; x++)
 	{
 		dest[x] = src[x];
 	}
