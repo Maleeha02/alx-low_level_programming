@@ -2,10 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_buffer - Prints buffer
+ * print_buffer - Prints a buffer 10 bytes at a time, starting with
+ * the byte possition, then showing the hex content,
+ * then displaying printable characters.
  * @b: buffer
  * @size: size
- * Return: void
  */
 
 void print_buffer(char *b, int size)
@@ -20,8 +21,10 @@ void print_buffer(char *b, int size)
 		{
 			if ((index + byte) >= size)
 				printf(" ");
+
 			else
 				printf("%02x", *(b + index + byte));
+
 			if ((index % 2) != 0 && index != 0)
 				printf(" ");
 		}
@@ -30,8 +33,10 @@ void print_buffer(char *b, int size)
 		{
 			if ((index + byte) >= size)
 				break;
+
 			else if (*(b + index + byte) >= 31 && *(b + index + byte) <= 126)
 				printf("%c", *(b + index + byte));
+
 			else
 				printf(".");
 		}
