@@ -1,11 +1,5 @@
-#include "main.h"
 #include <stdio.h>
-
-/**
- * print_buffer - Prints a buffer
- * @b: buffer
- * @size: size
- */
+#include <ctype.h>
 
 void print_buffer(char *b, int size)
 {
