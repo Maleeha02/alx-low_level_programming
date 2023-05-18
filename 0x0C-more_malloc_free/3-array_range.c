@@ -2,23 +2,22 @@
 #include <stdlib.h>
 /**
  * *array_range - Creates an array of integers
- * @min: Minimum value
- * @max: Maximum value
+ * @min: Minimum range of values stored
+ * @max: Maximum range of values stored
  * Return: Pointer to the newly created array
- * if min > max, return NULL
- * if malloc fails, return NULL.
  */
 int *array_range(int min, int max)
 {
-	int *ar;
-	int i;
+	int *ptr;
+	int i, size;
 
 	if (min > max)
 		return (NULL);
-	ar = malloc(sizeof(*ar) * ((max - min) + 1));
-	if (ar == NULL)
+	size = max - min + 1;
+	ptr = malloc(sizeof(int) * size);
+	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; min <= max; i++, min++)
-		sr[i] = min;
-	return (ar);
+	for (i = 0; min <= max; i++)
+		ptr[i] = min++;
+	return (ptr);
 }
