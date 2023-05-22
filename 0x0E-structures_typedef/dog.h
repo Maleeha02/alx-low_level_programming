@@ -4,9 +4,9 @@
 /**
  * init_dog - Initializes a variable of struct dog
  * @d: Pointer to struct dog to initialize
- * @name: Name to initialize
- * @age: Age to initialize
- * @owner: Owner to initialize
+ * @name: Name
+ * @age: Age
+ * @owner: Owner
  */
 
 struct dog
