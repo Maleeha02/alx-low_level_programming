@@ -2,7 +2,7 @@
 #include "dog.h"
 
 int _strlen(char *str);
-char *strcpy(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 dog_t *new_dog(char *name, float age, char *owner);
 
 /**
@@ -26,7 +26,7 @@ int _strlen(char *str)
  * @src: The source string
  * Return: The pointer to dest
  */
-char *strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int index = 0;
 
@@ -68,9 +68,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	doggo->name = *strcpy(doggo->name, name);
+	doggo->name = _strcpy(doggo->name, name);
 	doggo->age = age;
-	doggo->owner = *strcpy(doggo->owner, owner);
+	doggo->owner = _strcpy(doggo->owner, owner);
 
 	return (doggo);
 }
